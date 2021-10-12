@@ -10,7 +10,7 @@ from time import sleep, time
 
 def resource_path(relative_path):
     """
-    Recupere le chemin absolu d'un fichier selon son nom
+    Recupere le chemin absolu d'un fichier selon son nom (besoin pour le .exe)
     source : https://stackoverflow.com/questions/7674790/bundling-data-files-with-pyinstaller-onefile
     """
     import os, sys
