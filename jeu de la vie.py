@@ -58,6 +58,7 @@ def generer(case, x, y, contenu=[]):
         def update(self):
             def tryexcept(x, y):
                 try:
+                    # Ne devrait normalement pas marcher
                     return liste_case[(self.x+x)%x_fenetre][(self.y+y)%y_fenetre].couleur == "#000000"
                 except:  
                     return False
