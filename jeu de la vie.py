@@ -18,7 +18,7 @@ def resource_path(relative_path):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
 
-def generer(case, x, y, contenu=[]):
+def generer(case, x, y, contenu=[]):       
 
     global liste_case, casse, nb_update
 
@@ -189,8 +189,6 @@ def generer(case, x, y, contenu=[]):
                 if liste[x][y] == True:
                     liste_case[x][y].change_couleur()
                     
-    step = tk.Button(text="step", command=update, bg= "red", activebackground="red")
-    step.place(x=x_fenetre, y=50, width=50, height=30)
     
     global stop2, stop3
     stop2, stop3 = True, True
@@ -227,6 +225,8 @@ def generer(case, x, y, contenu=[]):
             lent_loopb.configure(bg= "red")
         
 
+    step = tk.Button(text="step", command=update, bg= "red", activebackground="red")
+    step.place(x=x_fenetre, y=50, width=50, height=30)
     loopb = tk.Button(text="loop inf", command=loop_10, bg= "red", activebackground="#ffff00")
     loopb.place(x=x_fenetre, y=80, width=50, height=30)
     lent_loopb = tk.Button(text="10 loop/s", command=lent_loop_10, bg= "red", activebackground="#ffff00")
@@ -249,4 +249,4 @@ def generer(case, x, y, contenu=[]):
     fenetre.bind("<e>", lambda : fenetre.destroy())
     fenetre.mainloop()
 
-generer(20, 500, 500)
+generer(20, 500, 500, [])
