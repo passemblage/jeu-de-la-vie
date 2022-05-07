@@ -1,3 +1,4 @@
+# FONCTIONNEMENT DU JEU
 # survie si 2 ou 3 voisine
 # sinon meure
 # si case vide avec 3 voisine -> naissance
